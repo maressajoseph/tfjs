@@ -12,9 +12,10 @@ class LinearRegression extends Component {
     const xs = tf.tensor2d([-1, 0, 1, 2, 3, 4], [6, 1])
     const ys = tf.tensor2d([-3, -1, 1, 3, 5, 7], [6, 1])
 
-    // train model w/training data (epochs property specifies how many times tf is going thru training set)
+    // train model w/training data (epochs property specifies how many times tf
+    // is going through training set)
     // result of the fit method is a promise => callback fn when training is done
-    model.fit(xs, ys, { epochs: 500 }).then(() => {
+    model.fit(xs, ys, { epochs: 500, shuffle: true }).then(() => {
       model.predict(tf.tensor2d([5], [1,1])).print()
       this.setState({
         training: false
@@ -25,7 +26,7 @@ class LinearRegression extends Component {
   handleClick = () => {
     const val = document.getElementById('inputValue').value
     this.setState({
-      result: String(model.predict(tf.tensor2d([val], [1,1])))
+      result: String(model.predict(tf.tensor2d([val], [1,1])).dataSync()[0])
     })
   }
 

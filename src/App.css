@@ -9,3 +9,13 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.prediction-canvas { 
+  width: 100px;
+  margin: 20px;
+}
+
+.prediction-div {
+  display: inline-block;
+  margin: 10px;
+}

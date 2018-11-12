@@ -798,12 +798,34 @@
     "@svgr/core" "^2.4.1"
     loader-utils "^1.1.0"
 
+"@tensorflow-models/mobilenet@0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@tensorflow-models/mobilenet/-/mobilenet-0.1.0.tgz#db8a6934f016a980a83be659a4519cc78509024e"
+
+"@tensorflow-models/posenet@0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@tensorflow-models/posenet/-/posenet-0.1.3.tgz#8b10e39361433826e41ac799271b18d7d5fd8462"
+
+"@tensorflow/tfjs-converter@0.4.1":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@tensorflow/tfjs-converter/-/tfjs-converter-0.4.1.tgz#faf2e0c4ecf1c67aac59a70f0c8073a04bb23d6a"
+  dependencies:
+    "@types/long" "~3.0.32"
+    protobufjs "~6.8.0"
+    url "^0.11.0"
+
 "@tensorflow/tfjs-converter@0.6.1":
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/@tensorflow/tfjs-converter/-/tfjs-converter-0.6.1.tgz#a07ede029434aa54f374fb31b029af9a4e2daa0c"
   dependencies:
     "@types/long" "~3.0.32"
     protobufjs "~6.8.6"
+
+"@tensorflow/tfjs-core@0.11.4":
+  version "0.11.4"
+  resolved "https://registry.yarnpkg.com/@tensorflow/tfjs-core/-/tfjs-core-0.11.4.tgz#5f8eba5ce8c20ba4686a7a0910adf00044e166d5"
+  dependencies:
+    seedrandom "~2.4.3"
 
 "@tensorflow/tfjs-core@0.13.2":
   version "0.13.2"
@@ -814,9 +836,21 @@
     "@types/webgl2" "~0.0.4"
     seedrandom "~2.4.3"
 
+"@tensorflow/tfjs-layers@0.6.4":
+  version "0.6.4"
+  resolved "https://registry.yarnpkg.com/@tensorflow/tfjs-layers/-/tfjs-layers-0.6.4.tgz#fc3ce40f1f7352299fe9220d9f5a960c5600c982"
+
 "@tensorflow/tfjs-layers@0.8.1":
   version "0.8.1"
   resolved "https://registry.yarnpkg.com/@tensorflow/tfjs-layers/-/tfjs-layers-0.8.1.tgz#08173c4ef16090821946d37d41a1fd21011afb00"
+
+"@tensorflow/tfjs@0.11.4":
+  version "0.11.4"
+  resolved "https://registry.yarnpkg.com/@tensorflow/tfjs/-/tfjs-0.11.4.tgz#8a6f1c835a653a94eeddc112b62992468352d27e"
+  dependencies:
+    "@tensorflow/tfjs-converter" "0.4.1"
+    "@tensorflow/tfjs-core" "0.11.4"
+    "@tensorflow/tfjs-layers" "0.6.4"
 
 "@tensorflow/tfjs@^0.13.1":
   version "0.13.1"
@@ -3049,6 +3083,10 @@ eventemitter3@^3.0.0:
 events@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/events/-/events-1.1.1.tgz#9ebdb7635ad099c70dcc4c2a1f5004288e8bd924"
+
+events@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/events/-/events-3.0.0.tgz#9a0a0dfaf62893d92b875b8f2698ca4114973e88"
 
 eventsource@0.1.6:
   version "0.1.6"
@@ -5366,6 +5404,15 @@ mkdirp@0.5.1, mkdirp@0.5.x, mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@
   dependencies:
     minimist "0.0.8"
 
+ml5@0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/ml5/-/ml5-0.1.1.tgz#105f3fae4d06fadab3f2146dc82b3dd0ad505187"
+  dependencies:
+    "@tensorflow-models/mobilenet" "0.1.0"
+    "@tensorflow-models/posenet" "0.1.3"
+    "@tensorflow/tfjs" "0.11.4"
+    events "^3.0.0"
+
 move-concurrently@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/move-concurrently/-/move-concurrently-1.0.1.tgz#be2c005fda32e0b29af1f05d7c4b33214c701f92"
@@ -6613,7 +6660,7 @@ prop-types@^15.6.2:
     loose-envify "^1.3.1"
     object-assign "^4.1.1"
 
-protobufjs@~6.8.6:
+protobufjs@~6.8.0, protobufjs@~6.8.6:
   version "6.8.8"
   resolved "https://registry.yarnpkg.com/protobufjs/-/protobufjs-6.8.8.tgz#c8b4f1282fd7a90e6f5b109ed11c84af82908e7c"
   dependencies:
